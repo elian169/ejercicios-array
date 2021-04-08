@@ -1,54 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PruebaClase1
+namespace _2
 {
-    class Persona
+    class Program
     {
-        private string nombre;
-        private int edad;
-
-        public void Inicializar()
-        {
-            Console.Write("Ingrese el nombre:");
-            nombre = Console.ReadLine();
-            string linea;
-            Console.Write("Ingrese la edad:");
-            linea = Console.ReadLine();
-            edad = int.Parse(linea);
-        }
-
-        public void Imprimir()
-        {
-            Console.Write("Nombre:");
-            Console.WriteLine(nombre);
-            Console.Write("Edad:");
-            Console.WriteLine(edad);
-        }
-
-        public void EsMayorEdad()
-        {
-            if (edad >= 18)
-            {
-                Console.Write("Es mayor de edad");
-            }
-            else
-            {
-                Console.Write("No es mayor de edad");
-            }
-            Console.ReadKey();
-        }
-
-
         static void Main(string[] args)
         {
-            Persona per1 = new Persona();
-            per1.Inicializar();
-            per1.Imprimir();
-            per1.EsMayorEdad();
-        }
+
+			int[] dias = new int[4];
+			dias[1] = 31;
+			dias[2] = 30;
+			dias[3] = 28;
+
+			int[] meses = new int[13];
+			meses[1] = dias[1];
+			meses[2] = dias[3];
+			meses[3] = dias[1];
+			meses[4] = dias[2];
+			meses[5] = dias[1];
+			meses[6] = dias[2];
+			meses[7] = dias[1];
+			meses[8] = dias[1];
+			meses[9] = dias[2];
+			meses[10] = dias[1];
+			meses[11] = dias[2];
+			meses[12] = dias[1];
+
+			int mes = 0;
+			mes = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("El mes número {0} tiene {1} dias", mes, meses[mes]);
+			//Console.Write("{0}")
+			Console.ReadKey();
+		}
+	
     }
 }
